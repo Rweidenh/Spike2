@@ -5,7 +5,7 @@ public class HelloWorldDriver {
 	public static void main(String[] args) {
 	try{  
 		Class.forName("com.mysql.jdbc.Driver");  
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3308/ap","root","");  
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/my_web_db?"+"user=root&password=password");  
 		Statement stmt=con.createStatement();  
 		ResultSet rs=stmt.executeQuery("select * from sampletable");  
 		while(rs.next())  {
@@ -16,8 +16,7 @@ public class HelloWorldDriver {
 			catch(Exception e)
 			{ 
 				System.out.println(e);
-				//d
-				//test2
+				
 			}   
 		}
 		
